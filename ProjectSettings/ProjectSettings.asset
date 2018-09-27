@@ -581,11 +581,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Template_3D
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: "C:\\Users\\Inform\xE1tica\\Jose\\Jose_ZombieBird\\Assets\\WSATestCertificate.pfx"
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 80af1bda3d75d501
   metroApplicationDescription: Template_3D
   wsaImages: {}
   metroTileShortName: 

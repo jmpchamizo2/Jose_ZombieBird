@@ -8,7 +8,7 @@ public class Tuberias : MonoBehaviour {
 
 	
 	void Start () {
-        float factorPosicion = Random.RandomRange(-2, 2);
+        float factorPosicion = Random.Range( - GameConfig.GetPuntuacion() * 0.5f, GameConfig.GetPuntuacion() * 0.5f);
         this.transform.position = new Vector3(
             transform.position.x,
             transform.position.y + factorPosicion,

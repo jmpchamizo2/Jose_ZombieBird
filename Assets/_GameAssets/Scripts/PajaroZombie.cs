@@ -10,7 +10,6 @@ public class PajaroZombie : MonoBehaviour {
     [SerializeField] private float fuerza = 10f;
     [SerializeField] ParticleSystem explosion;
     private Rigidbody rb;
-    private int puntuacion = 0;
 
     private void Start()
     {
@@ -42,12 +41,12 @@ public class PajaroZombie : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        puntuacion++;
+        GameConfig.SetPuntuacion(GameConfig.GetPuntuacion() + 1);
         ActualizarMarcador();
     }
 
     private void ActualizarMarcador()
     {
-        marcador.text = "Puntación: " + puntuacion.ToString();
+        marcador.text = "Puntación: " + GameConfig.GetPuntuacion().ToString();
     }
 }
