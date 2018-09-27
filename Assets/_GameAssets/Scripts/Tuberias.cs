@@ -5,10 +5,13 @@ using UnityEngine;
 public class Tuberias : MonoBehaviour {
     //Podremos editarla desde el editor
     [SerializeField] int speed = 3;
+    [SerializeField] float tiempoAumentoDificultad = 0.5f;
+    [SerializeField] int posicionDesaparicionTuberia = -14;
 
-	
-	void Start () {
-        float factorPosicion = Random.Range( - GameConfig.GetPuntuacion() * 0.5f, GameConfig.GetPuntuacion() * 0.5f);
+
+
+    void Start () {
+        float factorPosicion = Random.Range(-GameConfig.GetPuntuacion() * tiempoAumentoDificultad, GameConfig.GetPuntuacion() * tiempoAumentoDificultad);
         this.transform.position = new Vector3(
             transform.position.x,
             transform.position.y + factorPosicion,
@@ -21,7 +24,7 @@ public class Tuberias : MonoBehaviour {
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
-        if (transform.position.x < -14)
+        if (transform.position.x < posicionDesaparicionTuberia)
         {
             Destroy(this.gameObject);
         }

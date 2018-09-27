@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PipeGenerator : MonoBehaviour {
-    [SerializeField] Transform tuberia;
+    [SerializeField] private Transform tuberia;
+    [SerializeField] private float ratioTuberias = 2f;
 
 	// Use this for initialization
 	void Start () {
-        InvokeRepeating("GeneratePipe", 0, 2);
+        InvokeRepeating("GeneratePipe", 0, ratioTuberias);
 
     }
 	
